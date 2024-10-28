@@ -1,5 +1,5 @@
 # NgRx Signal Store - The missing guide
-![thumbnail](./slides/Thumbnail.png)
+![thumbnail](./slides/thumbnail.png)
 
 ## Hello
 This repository contains the material for the *UDEMY* course
