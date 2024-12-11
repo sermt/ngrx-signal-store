@@ -1,27 +1,15 @@
-# NgrxQuiz
+# Try it yourself - Creating a signal store
+In this exercise we will repeat what I did in the **Colors Quiz** project, and add a signal store.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
+Please repeat the following steps: 
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. Create a `/store` folder and in it a `quiz.slice.ts` file
+   - Define an interface with the correct **Core State**
+   - Define a constant with the initial value of the sate
+2. Create a `quiz.store.ts` file
+   - Define a constant, and call the `signalStore` function
+   - Use the `withState` function to add a state feature with the slice you have defined
+   - Add configuration so that the store is provided in root
+3. Consume the store into the app component
+    - Inject the store using the `inject` function
+    - Display the questions in the template
