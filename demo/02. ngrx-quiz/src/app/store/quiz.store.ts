@@ -5,10 +5,17 @@ import { computed } from "@angular/core";
 export const QuizStore = signalStore(
     { providedIn: 'root'}, 
     withState(initialQuizSlice), 
-    withComputed((store) => ({
-        currentQuestionIndex: computed(() => store.answers().length),
-        isDone: computed(() => store.answers().length === store.questions().length), 
-    }))
+    withComputed((store) => {
+        const currentQuestionIndex = computed(() => store.answers().length);
+        const isDone = computed(() => store.answers().length === store.questions().length);
+        const currentQuestion = computed(() => store.questions()[currentQuestionIndex()]);
+
+        return {
+            currentQuestionIndex,
+            isDone, 
+            currentQuestion
+        }
+    }), 
 );
 
 
