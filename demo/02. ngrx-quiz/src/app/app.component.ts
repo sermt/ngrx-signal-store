@@ -7,11 +7,10 @@ import { DoneComponent } from "./components/done/done.component";
 import { BusyComponent } from './components/busy/busy.component';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [SharedModule, QuestionPresenterComponent, ToolbarComponent, ProgressComponent, DoneComponent, BusyComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+    selector: 'app-root',
+    imports: [SharedModule, QuestionPresenterComponent, ToolbarComponent, ProgressComponent, DoneComponent, BusyComponent],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'ngrx-quiz';

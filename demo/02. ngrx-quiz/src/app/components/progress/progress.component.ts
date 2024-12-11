@@ -2,11 +2,10 @@ import { Component, computed, Input, signal } from '@angular/core';
 import { SharedModule } from '../../shared.module';
 
 @Component({
-  selector: 'app-progress',
-  standalone: true,
-  imports: [SharedModule],
-  templateUrl: './progress.component.html',
-  styleUrl: './progress.component.scss'
+    selector: 'app-progress',
+    imports: [SharedModule],
+    templateUrl: './progress.component.html',
+    styleUrl: './progress.component.scss'
 })
 export class ProgressComponent {
   readonly value = signal(4);
