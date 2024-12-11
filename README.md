@@ -17,4 +17,5 @@ In this repository you can find all material for the course
   * [StackBlitz](https://stackblitz.com/fork/github/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/01.%20ngrx-quiz-add-state?title=Create%20Signal%20Store&file=README.md)
 
 * Try it 02 - Add computed signals
-  * [Github]()
+  * [Github](https://github.com/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/02.%20ngrx-quiz-add-computed)
+  * [StackBlitz](https://stackblitz.com/fork/github/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/02.%20ngrx-quiz-add-computed?title=Add%20Computed%20Signals&file=README.md)
