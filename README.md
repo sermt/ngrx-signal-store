@@ -9,3 +9,7 @@ In this repository you can find all material for the course
 
 
 ## Practice Exercises on StackBlitz
+
+### Section 3 - Introduction to @ngrx/signals
+
+* [Try it 01 - Add the state type and initial value]()
