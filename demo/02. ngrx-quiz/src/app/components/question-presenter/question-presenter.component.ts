@@ -12,10 +12,4 @@ import { patchState } from '@ngrx/signals';
 export class QuestionPresenterComponent {
   readonly store = inject(QuizStore);
   readonly question = this.store.currentQuestion;
-
-  onSelect(index: number) {
-    console.log('Selected answer:', index);
-    this.store.addAnswer(index);
-
-  }
 }
