@@ -22,4 +22,4 @@ In this repository you can find all material for the course
 
 * Try it 03 - Add methods and complete quiz flow
   * [GitHub](https://github.com/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/03.%20ngrx-quiz-add-methods)
-  * [StackBlitz](https://stackblitz.com/fork/github/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/03.%20ngrx-quiz-add-methods?title=Add%Methods%20Updaters&file=README.md)
+  * [StackBlitz](https://stackblitz.com/fork/github/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/03.%20ngrx-quiz-add-methods?title=Add%20Methods%20Updaters&file=README.md)
