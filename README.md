@@ -23,3 +23,7 @@ In this repository you can find all material for the course
 * Try it 03 - Add methods and complete quiz flow
   * [GitHub](https://github.com/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/03.%20ngrx-quiz-add-methods)
   * [StackBlitz](https://stackblitz.com/fork/github/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/03.%20ngrx-quiz-add-methods?title=Add%20Methods%20Updaters&file=README.md)
+
+* Try it 04 - Add hooks
+  * [GitHub](https://github.com/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/04.%20ngrx-quiz-add-hooks)
+  * [StackBlitz](https://stackblitz.com/fork/github/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/04.%20ngrx-quiz-add-hooks?title=Add%20Hooks&file=README.md)
