@@ -2,6 +2,7 @@ import { patchState, signalStore, withComputed, withMethods, withState } from "@
 import { initialQuizSlice } from "./quiz.slice";
 import { computed } from "@angular/core";
 import { addAnswer, resetQuiz } from "./quiz.updaters";
+import { getCorrectCount } from "./quiz.helpers";
 
 export const QuizStore = signalStore(
     { 
@@ -13,12 +14,14 @@ export const QuizStore = signalStore(
         const isDone = computed(() => store.answers().length === store.questions().length);
         const currentQuestion = computed(() => store.questions()[currentQuestionIndex()]);
         const questionsCount = computed(() => store.questions().length);
+        const correctCount = computed(() => getCorrectCount(store.answers(), store.questions()));
 
         return {
             currentQuestionIndex,
             isDone, 
             currentQuestion, 
-            questionsCount
+            questionsCount, 
+            correctCount
         }
     }), 
     withMethods(store => ({
