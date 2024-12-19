@@ -1,7 +1,8 @@
-import { signalStore, withComputed, withState } from '@ngrx/signals';
+import { patchState, signalStore, withComputed, withMethods, withState } from '@ngrx/signals';
 import { initialShopSlice } from './shop.slice';
 import { computed } from '@angular/core';
 import { buildCartVm, buildProductListVm } from './shop-vm.builder';
+import * as updaters from './shop.updaters';
 export const ShopStore = signalStore(
     { providedIn: 'root' },
     withState(initialShopSlice), 
@@ -17,5 +18,21 @@ export const ShopStore = signalStore(
             store.taxRate(), 
             store.cartVisible()
         ))
+    })), 
+    withMethods(store => ({
+        setSearchWord: (searchWord: string) => 
+            patchState(store, updaters.setSearchWord(searchWord)),
+        addToCart: (productId: string) =>
+            patchState(store, updaters.addToCart(productId)),
+        viewCart: () =>
+            patchState(store, updaters.viewCart()),
+        hideCart: () =>
+            patchState(store, updaters.hideCart()),
+        incrementQuantity: (productId: string) =>
+            patchState(store, updaters.incrementQuantity(productId)),
+        decrementQuantity: (productId: string) =>
+            patchState(store, updaters.decrementQuantity(productId)),
+        checkoutCart: () =>
+            patchState(store, updaters.checkoutCart())
     }))
 )
