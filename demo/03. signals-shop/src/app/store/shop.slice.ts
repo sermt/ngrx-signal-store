@@ -15,11 +15,9 @@ export interface ShopSlice {
 
 export const initialShopSlice: ShopSlice = {
     products: ALL_PRODUCTS, 
-    searchWord: 'signal', 
+    searchWord: '', 
     cartQuantities: {
-        'signal-booster': 3, 
-        'reactive-refresher': 2
     }, 
-    cartVisible: true, 
+    cartVisible: false, 
     taxRate: 0.08
 }

@@ -14,5 +14,6 @@ export interface CartVm {
     readonly itemsCount: number;
     readonly isActive: boolean;
     readonly isVisible: boolean;
+    readonly canCheckout: boolean;
 
 }
