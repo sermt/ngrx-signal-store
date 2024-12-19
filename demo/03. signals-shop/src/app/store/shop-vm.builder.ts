@@ -1,5 +1,6 @@
+import { CartItemVm } from "../components/cart/view-model/cart-item.vm";
 import { Product } from "../models/product.model";
-import { ProductListVm } from "./shop.vm";
+import { CartVm, ProductListVm } from "./shop.vm";
 
 export function buildProductListVm(
     products: Product[],  
@@ -10,7 +11,6 @@ export function buildProductListVm(
     return {
         productItems: buildProductItems()
     }
-
 
     function buildProductItems() {
         const word = searchWord
@@ -24,5 +24,43 @@ export function buildProductListVm(
                 quantity: quantities[product.id] || 0
             }));
 
+    }
+}
+
+export function buildCartVm(
+    products: Product[], 
+    quantities: Record<string, number>,
+    taxRate: number,
+    cartVisible: boolean
+): CartVm {
+    const items = buildCartItems();
+    const subtotal = items.reduce((sum, item) => sum + item.total, 0);
+    const tax = subtotal * taxRate;
+    const total = subtotal + tax;
+    const itemsCount = items.length;
+    const isActive = itemsCount > 0;
+    const isVisible = cartVisible;
+
+    return {
+        items, 
+        subtotal, 
+        tax, 
+        total, 
+        isActive, 
+        isVisible
+    }
+    function buildCartItems(): CartItemVm[] {
+        return products
+            .filter(product => quantities[product.id])
+            .map(product => {
+                const quantity = quantities[product.id];
+                return {
+                    id: product.id, 
+                    name: product.name, 
+                    price: product.unitPrice, 
+                    quantity, 
+                    total: product.unitPrice * quantity
+                }
+            })
     }
 }
