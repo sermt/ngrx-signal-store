@@ -1,59 +1,27 @@
-# SignalsShop
+# Signals Shop - Udemy Course Project
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.4.
+Welcome to the **Signals Shop** project! This project is part of your learning journey in the **NGRX Signal Store** Udemy course.
 
-## Development server
+## Project Overview
 
-To start a local development server, run:
+The UI for the Signals Shop is ready, and we will add state management features to the application throughout the course. After learning new features of NGRX Signals in each section, we will apply those features to this project. By the end of the course, the application will be fully functional, showcasing the power of NGRX Signals.
 
-```bash
-ng serve
-```
+The application has an inventory of signal-related "fictional" products. You can search through the inventory and add items to the cart. Then you can modify the quantities of each item in the cart. Finally, you can checkout the cart. The application keeps your cart state stored in the local storage, so you can continue from where you left off.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## How to Use This Project
 
-## Code scaffolding
+1. Follow the instructions provided in the course for each section.
+2. Implement the state management features as you progress through the lectures.
+3. Complete the project step-by-step until it becomes a fully functional shopping application.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Current Section: NGRX Core Features
 
-```bash
-ng generate component component-name
-```
+In this section, we start with the NGRX core features:
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+1. Defining the core state and store.
+2. Adding derived state (view models).
+3. Adding methods using updaters.
+4. Adding cart persistency using hooks.
 
-```bash
-ng generate --help
-```
+Enjoy building the Signals Shop and applying your new skills!
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
