@@ -3,7 +3,6 @@ import { initialQuizSlice, QuizSlice } from "./quiz.slice";
 import { computed, effect, inject } from "@angular/core";
 import { addAnswer, resetQuiz } from "./quiz.updaters";
 import { getCorrectCount } from "./quiz.helpers";
-import { QUESTION_CAPTION } from "../../../data/dictionaries";
 
 export const QuizStore = signalStore(
     { 
