@@ -120,7 +120,8 @@ export function getColorDisplayNameMap() {
         "SkyBlue", "SlateBlue", "SlateGray", "SlateGrey", "Snow",
         "SpringGreen", "SteelBlue", "Tan", "Teal", "Thistle",
         "Tomato", "Turquoise", "Violet", "Wheat", "White",
-        "WhiteSmoke", "Yellow", "YellowGreen"
+        "WhiteSmoke", "Yellow", "YellowGreen", 
+        "Question: What do you get when you add"
     ];
 
     return Object.fromEntries(htmlColors.map(clr => [clr.toLowerCase(), splitCamelCase(clr)]));    

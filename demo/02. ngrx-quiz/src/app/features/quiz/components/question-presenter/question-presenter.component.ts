@@ -1,7 +1,6 @@
 import { Component, inject } from '@angular/core';
-import { SharedModule } from '../../shared.module';
+import { SharedModule } from '../../../../shared.module';
 import { QuizStore } from '../../store/quiz.store';
-import { patchState } from '@ngrx/signals';
 
 @Component({
     selector: 'app-question-presenter',
@@ -11,5 +10,4 @@ import { patchState } from '@ngrx/signals';
 })
 export class QuestionPresenterComponent {
   readonly store = inject(QuizStore);
-  readonly question = this.store.currentQuestion;
 }
