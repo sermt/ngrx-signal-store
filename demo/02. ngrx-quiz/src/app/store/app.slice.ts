@@ -5,5 +5,5 @@ export interface AppSlice {
 
 export const initialAppSlice: AppSlice = {
     selectedLanguage: '', 
-    possibleLanguages: []
+    possibleLanguages: [], 
 }
