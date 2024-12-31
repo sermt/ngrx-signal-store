@@ -38,6 +38,11 @@ In this repository you can find all material for the course
 * Practice 06 - Providers, Closures and Injections
   * [GitHub](https://github.com/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/06.%20ngrx-quiz-injection)
   * [StackBlitz](https://stackblitz.com/fork/github/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/06.%20ngrx-quiz-injection?title=Providers%20Closures%20And%20Injection&file=README.md)
+
 * Practice 07 - Computed signals from injected store
   * [GitHub](https://github.com/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/07.%20ngrx-quiz-computed)
   * [StackBlitz](https://stackblitz.com/fork/github/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/07.%20ngrx-quiz-computed?title=Injected%20Computed%20Signals&file=README.md)
+
+* Practice 08 - Private non-signal store members
+  * [GitHub](https://github.com/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/08.%20ngrx-quiz-private-state)
+  * [StackBlitz](https://stackblitz.com/fork/github/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/08.%20ngrx-quiz-private-state?title=Private%20Store%20Members&file=README.md)
