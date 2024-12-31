@@ -1,5 +1,4 @@
 import { ALL_PRODUCTS } from "../data/all-products";
-import { CartQuantities } from "../models/cart-quantities.model";
 import { Product } from "../models/product.model";
 
 export interface ShopSlice {
@@ -7,9 +6,11 @@ export interface ShopSlice {
 
     readonly searchWord: string;
 
-    readonly cartQuantities: CartQuantities;
+    readonly cartQuantities: Record<string, number>;
 
     readonly cartVisible: boolean;
+
+    readonly taxRate: number;
 }
 
 export type PersistedShopSlice = Pick<ShopSlice, 'cartQuantities'>;
@@ -20,4 +21,5 @@ export const initialShopSlice: ShopSlice = {
     cartQuantities: {
     }, 
     cartVisible: false, 
+    taxRate: 0.08
 }

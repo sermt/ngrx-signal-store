@@ -2,7 +2,7 @@
 <img src="background.jpg">
 <app-product-list/>
 
-@if (store.vm().isCartVisible) {
+@if (store.cartVm().isVisible) {
     <div class="cart">
         <div class="overlay" (click)="store.hideCart()"></div>
         <app-cart/>    

@@ -2,7 +2,7 @@ import { Component, computed, inject, input } from '@angular/core';
 import { SharedModule } from '../../../../shared.module';
 import { ProductItemVm } from '../../view-model/product-item.vm';
 import { RankingComponent } from '../ranking/ranking.component';
-import { ProductListStore } from '../../store/product-list.store';
+import { ShopStore } from '../../../../store/shop.store';
 
 @Component({
   selector: 'app-product-card',
@@ -11,7 +11,7 @@ import { ProductListStore } from '../../store/product-list.store';
   styleUrl: './product-card.component.scss'
 })
 export class ProductCardComponent {
-  readonly store = inject(ProductListStore);
+  readonly store = inject(ShopStore);
   readonly product = input.required<ProductItemVm>();
   readonly image = computed(() => `images/${this.product().id}.png`);
 
