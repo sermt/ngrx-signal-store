@@ -46,3 +46,9 @@ In this repository you can find all material for the course
 * Practice 08 - Private non-signal store members
   * [GitHub](https://github.com/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/08.%20ngrx-quiz-private-state)
   * [StackBlitz](https://stackblitz.com/fork/github/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/08.%20ngrx-quiz-private-state?title=Private%20Store%20Members&file=README.md)
+
+### Section 6 - Refactoring the shop project - Distributed stores
+
+* Practice 09 - Shop project - Distributed Stores
+  * [GitHub](https://github.com/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/09.%20signals-shop-part-2)
+  * [StackBlitz](https://stackblitz.com/fork/github/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/09.%20signals-shop-part-2?title=Distributed%20Stores&file=README.md)
