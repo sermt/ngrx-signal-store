@@ -3,13 +3,14 @@ import { initialQuizSlice, QuizSlice } from "./quiz.slice";
 import { computed, effect, inject } from "@angular/core";
 import { addAnswer, resetQuiz } from "./quiz.updaters";
 import { getCorrectCount } from "./quiz.helpers";
-import { AppStore } from "../../../store/app.store";
-import { QUESTION_CAPTION } from "../../../data/dictionaries";
 import { translate, translateToPairs } from "../../../store/app.helpers";
+import { QUESTION_CAPTION } from "../../../data/dictionaries";
+import { AppStore } from "../../../store/app.store";
 
 export const QuizStore = signalStore(
     withState(initialQuizSlice), 
     withComputed((store) => {
+        console.log('With Computed Feature Parameter is executed');
         const appStore = inject(AppStore);
         const dictionary = appStore.selectedDictionary;
 
@@ -18,7 +19,6 @@ export const QuizStore = signalStore(
         const currentQuestion = computed(() => store.questions()[currentQuestionIndex()]);
         const questionsCount = computed(() => store.questions().length);
         const correctCount = computed(() => getCorrectCount(store.answers(), store.questions()));
-
         const title = computed(() => translate(QUESTION_CAPTION, dictionary()));
         const captionColors = computed(() => translateToPairs(currentQuestion().caption, dictionary()));
         const answerColors = computed(() => translateToPairs(currentQuestion().answers, dictionary()));
@@ -40,6 +40,7 @@ export const QuizStore = signalStore(
     })), 
     withHooks(store => ({
         onInit: () => {
+            console.log('QuizStore initialized');
             const stateJson = localStorage.getItem('quiz');
             if (stateJson) {
                 const state = JSON.parse(stateJson) as QuizSlice;
@@ -51,6 +52,9 @@ export const QuizStore = signalStore(
                 const stateJson = JSON.stringify(state);
                 localStorage.setItem('quiz', stateJson);
             })
+        }, 
+        onDestroy: () => {
+            console.log('QuizStore destroyed');
         }
     }))
 );

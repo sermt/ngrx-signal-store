@@ -4,6 +4,7 @@ export function getDictionary(language: string, dictionaries: Dictionaries): Dic
     return dictionaries[language] ?? Object.values(dictionaries)[0];
 }
 
+
 export function translate(key: string, dictionary: Dictionary | null): string {
     if (!dictionary) return key;
     return dictionary[key] ?? key;

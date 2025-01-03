@@ -1,7 +1,6 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { SharedModule } from './shared.module';
 import { BusyComponent } from "./components/busy/busy.component";
-import { AppStore } from './store/app.store';
 
 @Component({
     selector: 'app-root',
@@ -10,5 +9,4 @@ import { AppStore } from './store/app.store';
     styleUrl: './app.component.scss', 
 })
 export class AppComponent {
-    readonly store = inject(AppStore);
 }
