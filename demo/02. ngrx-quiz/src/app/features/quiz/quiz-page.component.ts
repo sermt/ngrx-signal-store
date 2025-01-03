@@ -5,14 +5,15 @@ import { ToolbarComponent } from '../../components/toolbar/toolbar.component';
 import { ProgressComponent } from '../../components/progress/progress.component';
 import { DoneComponent } from './components/done/done.component';
 import { FlagComponent } from '../../components/flag/flag.component';
-import { QuizStore } from './store/quiz.store';
 import { AppStore } from '../../store/app.store';
+import { QuizStore } from './store/quiz.store';
 
 @Component({
   selector: 'app-quiz-page',
   imports: [SharedModule, QuestionPresenterComponent, ToolbarComponent, ProgressComponent, DoneComponent, FlagComponent],
-  templateUrl: './quiz.component.html',
-  styleUrl: './quiz.component.scss', 
+  templateUrl: './quiz-page.component.html',
+  styleUrl: './quiz-page.component.scss', 
+  providers: [QuizStore]
 })
 export default class QuizPageComponent {
   readonly appStore = inject(AppStore);

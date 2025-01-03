@@ -1,7 +1,7 @@
 import { Inject, inject, Injectable } from "@angular/core";
 import { DICTIONARIES_TOKEN } from "../tokens/dictionaries.token";
 import { getDictionary } from "../store/app.helpers";
-import { delay, Observable, of } from "rxjs";
+import { delay, Observable, of, tap } from "rxjs";
 import { Dictionary } from "../data/dictionaries";
 
 @Injectable({providedIn: 'root'})
@@ -23,7 +23,9 @@ export class DictionariesService {
 
     getDictionaryWithDelay(language: string): Observable<Dictionary> {
         return of(this.dictionaryOf(language)).pipe(
-            delay(this.nextDelay())
+            tap(_ => console.log(`Started loading for ${language}`)),
+            delay(this.nextDelay()),
+            tap(_ => console.log(`Finished loading for ${language}`)),
         );
     }
 }

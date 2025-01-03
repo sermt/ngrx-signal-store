@@ -1,9 +1,7 @@
-<div class="brand" routerLink="/home">
-    @if (icon()) {
-        <mat-icon>{{icon()}}</mat-icon>
-    }
-    {{caption()}}    
-</div>
+@if (icon()) {
+    <mat-icon>{{icon()}}</mat-icon>
+}
+{{caption()}}
 <div class="actions">
     <ng-content/>
 </div>
