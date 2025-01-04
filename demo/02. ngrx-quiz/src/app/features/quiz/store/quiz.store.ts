@@ -10,7 +10,6 @@ import { AppStore } from "../../../store/app.store";
 export const QuizStore = signalStore(
     withState(initialQuizSlice), 
     withComputed((store) => {
-        console.log('With Computed Feature Parameter is executed');
         const appStore = inject(AppStore);
         const dictionary = appStore.selectedDictionary;
 
@@ -40,7 +39,6 @@ export const QuizStore = signalStore(
     })), 
     withHooks(store => ({
         onInit: () => {
-            console.log('QuizStore initialized');
             const stateJson = localStorage.getItem('quiz');
             if (stateJson) {
                 const state = JSON.parse(stateJson) as QuizSlice;
@@ -52,9 +50,6 @@ export const QuizStore = signalStore(
                 const stateJson = JSON.stringify(state);
                 localStorage.setItem('quiz', stateJson);
             })
-        }, 
-        onDestroy: () => {
-            console.log('QuizStore destroyed');
         }
     }))
 );
