@@ -1,27 +1,24 @@
-# NgrxQuiz
+# Try It yourself - side effects in rxMethods
+In this exercise we will practice:
+1. Defining rxMethods
+2. Calling these methods and passing single values
+3. Adding `rxjs` operators
+4. Causing side effects using the `tap` operator
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
+## Setup
+1. In App Store, redefine the `_invalidateDictionary` method, so that it is implemented using `rxMethod`
+   1. Set the type parameter to string
+   2. Add a minimal parameter function, that takes a `trigger$` and returns it
+2. Fix calls to this function, made in `changeLanguage` and `_resetLanguages`
+   1. Since it does not return a Promise, remove the `await` keyword
+   2. Pass the currently selected language as parameter
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Using `rxjs` operators
+1. Add the first `tap` operator
+   1. Call `patchState` to set the busy indicator to `true`
+   2. Write something to the console
+2. Add a delay using the `delay` operator
+3. Add the second `tap` operator after the delay
+   1. Call `pathState` to set the busy indicator to false
+   2. Write something to the console

@@ -7,6 +7,7 @@ import {
   withProps,
   withState,
 } from '@ngrx/signals';
+import { rxMethod } from '@ngrx/signals/rxjs-interop';
 import { initialAppSlice } from './app.slice';
 import { computed, inject } from '@angular/core';
 import { DICTIONARIES_TOKEN } from '../tokens/dictionaries.token';
@@ -18,7 +19,7 @@ import {
 } from './app.updaters';
 import { getDictionary } from './app.helpers';
 import { DictionariesService } from '../services/dictionaries.service';
-import { firstValueFrom } from 'rxjs';
+import { firstValueFrom, tap, delay } from 'rxjs';
 
 export const AppStore = signalStore(
   { providedIn: 'root' },
