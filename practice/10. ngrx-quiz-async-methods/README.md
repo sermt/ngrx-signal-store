@@ -1,27 +1,17 @@
-# NgrxQuiz
+# Try It yourself - async methods
+In this exercise we will practice:
+1. Calling async APIs from the signal store
+2. Using Promises and `async-await`
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
+## Setup
+1. In app store, Inject the `DictionariesService` and store it privately using `withProps`
+2. Remove the `withComputed` feature that derived the current dictionary synchronously from the selected language
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## `withMethods`
+1. Create a method in the `withMethods` closure called '_invalidateDictionary` and make it an async method
+2. Use `patchState` to set the `isBusy` flag to true
+3. Run the async API in the service
+   1. use `firstValueFrom` to convert the `Observable` into a `Promise`
+   2. await the result
+4. Patch state again to set the busy flag to false, and to set the current dictionary
