@@ -56,4 +56,4 @@ In this repository you can find all material for the course
 ### Section 7 - Asynchronous Programming in Signal Store
 * Practice 10 - Using async methods
   * [GitHub](https://github.com/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/10.%20ngrx-quiz-async-methods)
-  * [StackBlitz](https://stackblitz.com/fork/github/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/10.%20ngrx-quiz-async-methods?title=?Using%20Async%20Methods&file=README.md)
+  * [StackBlitz](https://stackblitz.com/fork/github/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/10.%20ngrx-quiz-async-methods?title=Using%20Async%20Methods&file=README.md)
