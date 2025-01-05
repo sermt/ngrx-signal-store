@@ -17,8 +17,7 @@ import {
   setDictionary,
 } from './app.updaters';
 import { DictionariesService } from '../services/dictionaries.service';
-import { finalize, generate, map, switchAll, switchMap, tap } from 'rxjs';
-import { ColorQuizGeneratorService } from '../services/color-quiz-generator.service';
+import { switchMap, tap } from 'rxjs';
 import { NotificationsService } from '../services/notifications.service';
 
 export const AppStore = signalStore(
@@ -31,7 +30,6 @@ export const AppStore = signalStore(
     return {
       _dictionariesService,
       _languages,
-      _quizGeneratorService: inject(ColorQuizGeneratorService),
       _notifications: inject(NotificationsService),
     };
   }),
@@ -48,19 +46,11 @@ export const AppStore = signalStore(
             ))
       ));
 
+    _invalidateDictionary(store.selectedLanguage);
+
     return {
-      changeLanguage: () => {
-        patchState(store, changeLanguage(store._languages));
-        _invalidateDictionary(store.selectedLanguage());
-      },
-      _resetLanguages: () => {
-        patchState(store, resetLanguages(store._languages));
-        _invalidateDictionary(store.selectedLanguage());
-      },
-      generateQuiz: rxMethod<void>(trigger$ => trigger$.pipe(
-        tap(_ => patchState(store, setBusy(true))),
-        map(_ => store._quizGeneratorService.createRandomQuizSync()),
-      ))
+      changeLanguage: () => patchState(store, changeLanguage(store._languages)),
+      _resetLanguages: () => patchState(store, resetLanguages(store._languages))
     };
   }),
   withHooks((store) => ({
