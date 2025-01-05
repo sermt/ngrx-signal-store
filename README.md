@@ -63,3 +63,6 @@ In this repository you can find all material for the course
 * Practice 12 - Using async APIs in rxMethods
   * [GitHub](https://github.com/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/12.%20ngrx-quiz-async-apis)
   * [StackBlitz](https://stackblitz.com/fork/github/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/12.%20ngrx-quiz-async-apis?title=Calling%20Async%20APIs%20in%20rxMethods&file=README.md)
+* Practice 13 - Error Handling in rxMethods
+  * [GitHub](https://github.com/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/13.%20ngrx-quiz-error-handling)
+  * [StackBlitz](https://stackblitz.com/fork/github/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/13.%20ngrx-quiz-error-handling?title=Error%20Handling%20in%20rxMethods&file=README.md)
