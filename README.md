@@ -66,3 +66,6 @@ In this repository you can find all material for the course
 * Practice 13 - Error Handling in rxMethods
   * [GitHub](https://github.com/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/13.%20ngrx-quiz-error-handling)
   * [StackBlitz](https://stackblitz.com/fork/github/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/13.%20ngrx-quiz-error-handling?title=Error%20Handling%20in%20rxMethods&file=README.md)
+* Practice 14 - Signal Methods
+  * [GitHub](https://github.com/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/14.%20books-signal-method)
+  * [StackBlitz](https://stackblitz.com/fork/github/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/14.%20books-signal-method?title=Signal%20Methods&file=README.md)
