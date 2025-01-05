@@ -15,9 +15,7 @@ In this exercise we will practice:
 ## Generate new Quiz (Code along with me, or try it yourself first)
 1. We will now implement that "Generate new quiz" button in the toolbar using the `ColorQuizGeneratorService`
 2. Try to add an rxMethod for that
-3. Here are a few challanges to deal with:
-   - Are you using the best flattening operator for this scenario?
-   - Are you working correctly with the "busy" flag? What happens if the 2 rxMethods run in parallel?
+3. Are you using the best flattening operator for this scenario?
 4. Whether you have succeeded or not, watch my solution and code along with me.
 
 
