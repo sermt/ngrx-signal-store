@@ -60,3 +60,6 @@ In this repository you can find all material for the course
 * Practice 11 - Side effects in rxMethods
   * [GitHub](https://github.com/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/11.%20ngrx-quiz-rxMethod-tap)
   * [StackBlitz](https://stackblitz.com/fork/github/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/11.%20ngrx-quiz-rxMethod-tap?title=Side%20Effects%20in%20rxMethods&file=README.md)
+* Practice 12 - Using async APIs in rxMethods
+  * [GitHub](https://github.com/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/12.%20ngrx-quiz-async-apis)
+  * [StackBlitz](https://stackblitz.com/fork/github/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/12.%20ngrx-quiz-async-apis?title=Calling%20Async%20APIs%20in%20rxMethods&file=README.md)
