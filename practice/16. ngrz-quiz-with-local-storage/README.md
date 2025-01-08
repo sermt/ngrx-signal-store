@@ -1,4 +1,4 @@
-# Try It yourself - My first custom feature: withLocalStorage
+# Try It yourself - your first custom feature: `withLocalStorage`
 In this exercise we will practice:
 - Creating our own custom features
 
