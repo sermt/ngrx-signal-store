@@ -74,3 +74,6 @@ In this repository you can find all material for the course
 * Practice 15 - With Entities
   * [GitHub](https://github.com/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/15.%20books-with-entities)
   * [StackBlitz](https://stackblitz.com/fork/github/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/15.%20books-with-entities?title=With%20Entities&file=README.md)
+* Practice 16 - Your first custom feature: With Local Storage
+  * [GitHub](https://github.com/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/16.%20ngrz-quiz-with-local-storage)
+  * [StackBlitz](https://stackblitz.com/fork/github/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/16.%20ngrz-quiz-with-local-storage?title=Your%20First%20Custom%20Feature&file=README.md)
