@@ -6,6 +6,7 @@ import {
   withProps,
   withState,
 } from '@ngrx/signals';
+import { withDevtools } from '@angular-architects/ngrx-toolkit';
 import { rxMethod } from '@ngrx/signals/rxjs-interop';
 import { initialAppSlice } from './app.slice';
 import { inject } from '@angular/core';
@@ -57,5 +58,6 @@ export const AppStore = signalStore(
     onInit: () => {
       store._resetLanguages();
     },
-  }))
+  })), 
+  withDevtools('app-store')
 );
