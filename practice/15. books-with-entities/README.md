@@ -1,59 +1,28 @@
-# CustomComponent
+# Try It yourself - withEntities
+In this exercise we will practice:
+- Using custom features
+- Using `withEntities` for entity management
+- Configuring the entities
+- Using the `withEntities` updaters
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.4.
+>NOTE that we are already using the `withDevtools` feature, so if you have the **redux devtools** extension installed on your browser, you can use it to inspect the current state of the store.
 
-## Development server
 
-To start a local development server, run:
+## Creating entity configuration
+- Create the `bookConfig` constant
+  - Use the `entityConfig` creator function to create it
+  - In the `entity` property, use the `type<T>` function to define that the entity type is `Book`
+  - In the `collection` property, use `_books` as collection name, so that it will defined as a private collection
+  - You may **optionally** also define the `selectId` property, and use a lamda expression that extracts `book.id`. Since this is the default anyway, it is not **required**.
 
-```bash
-ng serve
-```
+## Using the feature
+- Add a `withEntities` feature to the store. Place it in the right position
+- Fix the implementation of the `book` computed signal so that it finds the book in the collection entity map.
+- Add `withHooks` and set all entities when the store is initialized, from the `BOOKS_COLLECTION` constant
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
+## Allow to rename the current book
+- Implement a `renameCurrentBook` method, and use the `updateEntity` updater.
+- Call the new method when the "rename" button is clicked.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
