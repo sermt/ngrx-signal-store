@@ -2,6 +2,7 @@ import { patchState, signalMethod, signalStore, withComputed, withMethods, withS
 import { initialBookPresenterSlice } from './book-presenter.slice';
 import { computed } from '@angular/core';
 import { BOOKS_COLLECTION } from '../../../data/books-collection';
+import { withDevtools } from '@angular-architects/ngrx-toolkit';
 export const BookPresenterStore = signalStore(
     withState(initialBookPresenterSlice), 
     withComputed(store => ({
@@ -10,5 +11,6 @@ export const BookPresenterStore = signalStore(
     withMethods(store => ({
         setBookId: signalMethod<number>(id => 
             patchState(store, { id }))
-    }))
+    })), 
+    withDevtools('book-presenter')
 )
