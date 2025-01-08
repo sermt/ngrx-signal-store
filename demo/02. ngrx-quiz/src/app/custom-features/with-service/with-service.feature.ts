@@ -20,7 +20,6 @@ export function withService<T, S extends object>(
         methods: {
             _load: () => void
         }
-
     }>
 
 export function withService<T, S extends object>(
@@ -44,5 +43,4 @@ export function withService<T, S extends object>(
                 }
             })
         )
-
 }
