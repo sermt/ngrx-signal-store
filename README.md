@@ -80,3 +80,6 @@ In this repository you can find all material for the course
 * Practice 17 - Features that add state
   * [GitHub](https://github.com/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/17.%20ngrx-quiz-with-busy)
   * [StackBlitz](https://stackblitz.com/fork/github/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/17.%20ngrx-quiz-with-busy?title=Stateful%20Custom%20Features&file=README.md)
+* Practice 18 - Features with required input
+  * [GitHub](https://github.com/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/18.%20ngrx-quiz-with-service)
+  * [StackBlitz](https://stackblitz.com/fork/github/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/18.%20ngrx-quiz-with-service?title=Features%20With%20Input%20Requirements&file=README.md)
