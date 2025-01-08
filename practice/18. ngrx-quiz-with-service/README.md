@@ -1,27 +1,28 @@
-# NgrxQuiz
+# Try It yourself - custom feature with input requirements: `withService`
+In this exercise we will practice:
+- Creating custom features that require content from the input store
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
+>NOTE that we are already using the `withDevtools` feature, so if you have the **redux devtools** extension installed on your browser, you can use it to inspect the current state of the stores.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Create the custom feature skeleton
+- Create the `with-service.feature.ts` file
+- Define the type `Update<S extends object>` according to what the `patchState` method receives
+- Define the signature of the feature
+  
 
-## Code scaffolding
+## Specify the input requirements
+- Use the first parameter inside teh `signalStoreFeature` to describe the requirements from the inout store
+- Implement the feature functionality using the `withMethods` feature
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Add a feature declaration
+- Add the feature declaration
+  - Add the input requirements
+  - Add the output content
 
-## Build
+## Use it in the quiz store
+- Remove the `withProps` feature - you don't need it anymore
+- Instead, use `withService` and supply the needed API and updater
+- Change the implementation of `generateQuiz` so that it uses the new `_load` method
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
