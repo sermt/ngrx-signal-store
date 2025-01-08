@@ -69,3 +69,8 @@ In this repository you can find all material for the course
 * Practice 14 - Signal Methods
   * [GitHub](https://github.com/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/14.%20books-signal-method)
   * [StackBlitz](https://stackblitz.com/fork/github/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/14.%20books-signal-method?title=Signal%20Methods&file=README.md)
+
+### Section 8 - Custom Features
+* Practice 15 - With Entities
+  * [GitHub](https://github.com/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/15.%20books-with-entities)
+  * [StackBlitz](https://stackblitz.com/fork/github/kobi-hari-udemy/ngrx-signal-store/tree/main/practice/15.%20books-with-entities?title=With%20Entities&file=README.md)
