@@ -12,32 +12,32 @@ export const QUESTIONS: Question[] =  [
       correctIndex: 1,
     },
     {
-      caption: ['blue', 'red'],
+      caption: ['Blue', 'Red'],
       answers: ['Magenta', 'Cyan', 'Purple', 'White'],
       correctIndex: 0,
     },
     {
-      caption: ['blue', 'lime'],
+      caption: ['Blue', 'Lime'],
       answers: ['Magenta', 'Cyan', 'White', 'Teal'],
       correctIndex: 1,
     },
     {
-      caption: ['lime', 'red'],
+      caption: ['Lime', 'Red'],
       answers: ['Brown', 'White', 'Orange', 'Yellow'],
       correctIndex: 3,
     },
     {
-      caption: ['cyan', 'red'],
+      caption: ['Cyan', 'Red'],
       answers: ['Magenta', 'Blue', 'White', 'Purple'],
       correctIndex: 2,
     },
     {
-      caption: ['blue', 'yellow'],
+      caption: ['Blue', 'Yellow'],
       answers: ['Green', 'Cyan', 'White', 'Lime'],
       correctIndex: 2,
     },
     {
-      caption: ['lime', 'magenta'],
+      caption: ['Lime', 'Magenta'],
       answers: ['Brown', 'Yellow', 'White', 'Orange'],
       correctIndex: 2,
     }
