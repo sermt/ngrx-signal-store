@@ -63,15 +63,17 @@ export function randomColorQuestion() {
 
     const htmlCols = namer(addedHex).html;
     const names = htmlCols.map(n => n.name);
+    const caser = caserMap();
     const name = names[0];
 
     const answers = [names[25], names[50], names[75], names[100]];
+        
     const correctIndex = randomNumber(0, 4);
     answers[correctIndex] = name;
 
     const question: Question = {
-        caption: colors, 
-        answers, 
+        caption: colors.map(a => caser[a]) as Question['caption'],
+        answers: answers.map(a => caser[a]), 
         correctIndex
     };
     return question;
@@ -127,6 +129,17 @@ export function getColorDisplayNameMap() {
     return Object.fromEntries(htmlColors.map(clr => [clr.toLowerCase(), splitCamelCase(clr)]));    
 }
 
+function caserMap() {
+    const res = getColorDisplayNameMap();
+    const entries = Object.entries(res)
+                .map(([key, value]) => [key, removeSpaces(value)])
+    return Object.fromEntries(entries);
+}
+
 export function displayNameOfColor(color: string) {
     return COLOR_DISPLAY_NAMES[color.toLowerCase()];
+}
+
+export function removeSpaces(str: string) {
+    return str.replace(/\s/g, '');
 }
