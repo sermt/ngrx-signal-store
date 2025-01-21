@@ -12,8 +12,8 @@ import { Question } from '../../models/question.model';
 export class QuestionPresenterComponent {
   readonly store = inject(QuizStore);
   readonly question = signal<Question>({
-    caption: ['Red', 'Green', 'Blue'],
-    answers: ['Brown', 'Yellow', 'Purple', 'White'],
+    caption: ['Red', 'Green'],
+    answers: ['Red', 'Green', 'Blue', 'Yellow'],
     correctIndex: 3
   });
 }
