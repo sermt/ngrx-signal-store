@@ -8,9 +8,9 @@ import { SharedModule } from '../../shared.module';
     styleUrl: './progress.component.scss'
 })
 export class ProgressComponent {
-  readonly value = input.required<number>();
+  readonly value = signal(3);
 
-  readonly max = input.required<number>();
+  readonly max = signal(10);
 
   readonly ratio = computed(() => this.value() / this.max());
 
