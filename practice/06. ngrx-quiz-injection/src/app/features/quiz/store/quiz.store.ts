@@ -11,10 +11,14 @@ import { initialQuizSlice, QuizSlice } from './quiz.slice';
 import { computed, effect, inject } from '@angular/core';
 import { addAnswer, resetQuiz } from './quiz.updaters';
 import { getCorrectCount } from './quiz.helpers';
+import { translate, translateToPairs } from '../../../store/app.helpers';
+import { QUESTION_CAPTION } from '../../../data/dictionaries';
+import { AppStore } from '../../../store/app.store';
 
 export const QuizStore = signalStore(
   withState(initialQuizSlice),
   withComputed((store) => {
+    const appStore = inject(AppStore);
     const currentQuestionIndex = computed(() => store.answers().length);
     const isDone = computed(
       () => store.answers().length === store.questions().length
@@ -26,6 +30,15 @@ export const QuizStore = signalStore(
     const correctCount = computed(() =>
       getCorrectCount(store.answers(), store.questions())
     );
+    const title = computed(() =>
+      translate(QUESTION_CAPTION, appStore.selectedDictionary())
+    );
+    const captionColors = computed(() =>
+      translateToPairs(currentQuestion().caption, appStore.selectedDictionary())
+    );
+    const answerColors = computed(() =>
+      translateToPairs(currentQuestion().answers, appStore.selectedDictionary())
+    );
 
     return {
       currentQuestionIndex,
@@ -33,6 +46,9 @@ export const QuizStore = signalStore(
       currentQuestion,
       questionsCount,
       correctCount,
+      title,
+      captionColors,
+      answerColors,
     };
   }),
   withMethods((store) => ({

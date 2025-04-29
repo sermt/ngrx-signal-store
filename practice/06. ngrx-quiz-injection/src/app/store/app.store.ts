@@ -15,8 +15,7 @@ import { getDictionary } from './app.helpers';
 export const AppStore = signalStore(
   { providedIn: 'root' },
   withState(initialAppSlice),
-  withComputed((store) => {
-    const dictionaries = inject(DICTIONARIES_TOKEN);
+  withComputed((store, dictionaries = inject(DICTIONARIES_TOKEN)) => {
     return {
       selectedDictionary: computed(() =>
         getDictionary(store.selectedLanguage(), dictionaries)
